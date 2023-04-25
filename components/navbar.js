@@ -54,7 +54,7 @@ export default function navbar() {
           <li>
             <Link
               className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 px-4 py-2"
-              href="/"
+              href="/blogs"
             >
               Blogs
             </Link>
