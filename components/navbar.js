@@ -9,9 +9,9 @@ export default function navbar() {
     }
   }
   return (
-    <div className="pt-10 sticky top-0 backdrop-blur-sm">
+    <div className="lg:pt-10 sticky top-0 backdrop-blur-sm">
       <nav className=" px-8 py-4 flex justify-between items-center border-y border-gray-400 dark:border-gray-700 bg-gray-100/40">
-        <Link href="/blogposts/jkak">
+        <Link href="/">
           <div className="text-3xl font-bold leading-none flex items-center space-x-4">
             <span className="text-gray-800 dark:text-gray-300 text-xl">
               {" "}
