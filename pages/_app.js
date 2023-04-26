@@ -1,5 +1,7 @@
 import "@/styles/globals.css";
 import Navbar from "@/components/navbar";
+import { Analytics } from '@vercel/analytics/react';
+
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -7,6 +9,7 @@ export default function App({ Component, pageProps }) {
         <Navbar />
 
         <Component {...pageProps} />
+        <Analytics />
       </div>
     </>
   );
