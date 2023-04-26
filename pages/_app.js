@@ -1,16 +1,22 @@
+import { useEffect, useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import "@/styles/globals.css";
 import Navbar from "@/components/navbar";
-import { Analytics } from '@vercel/analytics/react';
 
 export default function App({ Component, pageProps }) {
-  return (
-    <>
-      <div className="darkmodeToggle ">
-        <Navbar />
+  const [isMounted, setIsMounted] = useState(false);
 
-        <Component {...pageProps} />
-        <Analytics />
-      </div>
-    </>
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  return (
+    <div className="darkmodeToggle ">
+      <Navbar />
+
+      <Component {...pageProps} />
+
+      {isMounted && <Analytics />}
+    </div>
   );
 }
