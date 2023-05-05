@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 export default function handler(req, res) {
-  fs.readFile('blogData/how-to-learn-flask.json', 'utf8', (err, data) => {
+  fs.readFile(`blogData/${req.query.page}.json`, 'utf8', (err, data) => {
     if (err) {
       console.error(err);
       res.status(500).send('Error reading file');
