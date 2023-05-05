@@ -16,9 +16,13 @@ export default function Blogs() {
   return (
     <div>
       {blog.map((item) => (
-      <Link href={`/blogposts/${item.slug}`}  >
-      <div key={item.id}>{item.title}</div>
-      </Link>
+
+          <div key={item.id}>
+          <Link href={`/blogposts/${item.slug}`}>
+            {item.title}
+          </Link>
+          
+          </div>
       ))}
     </div>
   );
