@@ -1,24 +1,39 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useRouter } from "next/router";
-export default function pages() {
-  const router = useRouter();
-  const a = router.query;
-  const [blogss, setBlogss] = useState([]);
+export default function pages(props) {
 
-  useEffect(() => {
-    async function fetchData() {
-      if (!router.isReady) return;
-      let response = await fetch(`http://localhost:3002/api/getBlogs?page=${a.pages}`);
-      let data = await response.json();
-      setBlogss(data);
-    }
-    fetchData();
-  }, [router.isReady]);
+  // const [blogss, setBlogss] = useState([]);
+
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     if (!router.isReady) return;
+  //     let response = await fetch(`http://localhost:3003/api/getBlogs?page=${a.pages}`);
+  //     let data = await response.json();
+  //     setBlogss(data);
+  //   }
+  //   fetchData();
+  // }, [router.isReady]);
   // console.log(a.pages);
   return (
     <>
-      <div className="font-semibold text-2xl py-7 px-5">{blogss.title}</div>
-      <p className="font-sans text-lg py-7 px-5 w-11/12 mx-auto">{blogss.content}</p>
+      <div className="font-semibold text-2xl py-7 px-5">{props.data.title}</div>
+      <p className="font-sans text-lg py-7 px-5 w-11/12 mx-auto">
+        {props.data.content}
+      </p>
     </>
   );
+}
+export async function getServerSideProps(context) {
+  // const router = useRouter();
+  // const a = router.query;
+  // console.log(context.query)
+  let anyName = context.query;
+  let response = await fetch(`http://localhost:3003/api/getBlogs?page=${anyName.pages}`);
+  let data = await response.json();
+  console.log(data)
+  return {
+    props: {
+      data
+    }
+  };
 }
