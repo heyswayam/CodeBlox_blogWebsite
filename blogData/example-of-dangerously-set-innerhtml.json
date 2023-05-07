@@ -1,0 +1,9 @@
+
+    {
+        "id":1,
+        "title":  "example-of-dangerously-set-innerhtml",
+        "content": "<p>&nbsp;<\/p>\r\n<h3 style=\"text-align: center; color: #3f7320;\">DEMO FILE \uD83D\uDE01<\/h3>\r\n<!-- Comments are visible only in the source code -->\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp; This demo allows you to test the features of this online HTML converter. <br \/>&nbsp;&nbsp;&nbsp;&nbsp; Type in one of the fields and see the other one changing in real&nbsp;time!<\/strong><\/p>\r\n<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set up the cleaning options and press <span class=\"redButton\">\u25BC Clean<\/span><\/strong><\/p>\r\n<p>Work with any of the text areas and see the other one changing in real time:<\/p>\r\n<table class=\"demoTable\" style=\"height: 54px;\">\r\n<thead>\r\n<tr>\r\n<td><span style=\"color: #c82828;\">Left<\/span>: Preview<\/td>\r\n<td><span style=\"color: #c82828;\">Right<\/span>: Source code<\/td>\r\n<\/tr>\r\n<\/thead>\r\n<tbody>\r\n<tr>\r\n<td>Preview how your document will look when published.<\/td>\r\n<td>Adjust the syntax highlighted HTML code.<\/td>\r\n<\/tr>\r\n<\/tbody>\r\n<\/table>\r\n<p>&nbsp;<\/p>\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>Check out <a target=\"_blank\" rel=\"nofollow noopener\" href=\"https:\/\/pranx.com\/\">Pranx.com<\/a> for nice online pranks.<\/strong><\/p>",
+        "author": "Harry bhai",
+        "slug": "example-of-dangerously-set-innerhtml"
+
+    }

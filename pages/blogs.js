@@ -24,7 +24,7 @@ let anyName = props.jsonData;
   );
 }
 export async function getServerSideProps(context) {
-  let response = await fetch("http://localhost:3003/api/blog");
+  let response = await fetch("http://localhost:3000/api/blog");
   let jsonData = await response.json();
   return {
     props: {
